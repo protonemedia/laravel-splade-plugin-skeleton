@@ -14,7 +14,7 @@ php configure.php
 
 This will ask you a few questions and then configure the skeleton for you.
 
-### Building components
+### Develop environment
 
 The skeleton comes with a [Workbench](https://github.com/orchestral/workbench) setup. This allows you to build components in a full-blown Laravel application. The configuration script already installed the workbench for you, but you can also install it manually:
 
@@ -27,6 +27,26 @@ cd workbench && npm install
 Then, in the root of the project, run `composer dev` to start the Vite development server. This will watch your files and automatically recompile them when you make changes. In another terminal, run `composer serve` to start the Laravel HTTP server. This will serve the workbench application on `http://localhost:8000`.
 
 The default page is a simple Splade component. The workbench view can be found in `workbench/resources/views/demo.blade.php`. The component itself is in `src/Components/Example.php` and the Blade view in `resources/views/components/example.blade.php`.
+
+### Making Components
+
+You may create a new Splade component using the `make:splade-component` command:
+
+```bash
+./vendor/bin/testbench make:splade-component Avatar
+```
+
+Make sure to add the Component to the array in `src/PluginServiceProvider.php`:
+
+```php
+public function getComponents(): array
+{
+    return [
+        Components\Avatar::class,
+        Components\Example::class,
+    ];
+}
+```
 
 ### Prepare for production
 
