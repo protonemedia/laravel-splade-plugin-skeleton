@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+.phpunit.cache
+build
+composer.lock
+coverage
+docs
+node_modules
+package-lock.json
+phpstan.neon
+phpunit.xml
+vendor

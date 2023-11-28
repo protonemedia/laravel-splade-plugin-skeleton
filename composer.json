@@ -1,0 +1,71 @@
+{
+    "name": ":vendor_slug/:package_slug",
+    "description": "This is my package :package_slug",
+    "keywords": [
+        ":vendor_slug",
+        ":package_slug"
+    ],
+    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":author_name",
+            "email": "author@domain.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "protonemedia/laravel-splade-core": "^1.6.3"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^7.8",
+        "orchestra/testbench": "^8.8",
+        "orchestra/workbench": "^1.0",
+        "phpunit/phpunit": "^10.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "VendorName\\Skeleton\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+        }
+    },
+    "scripts": {
+        "format": [
+            "@composer run format-php",
+            "@composer run format-blade"
+        ],
+        "format-php": "@php vendor/bin/pint",
+        "format-blade": "node_modules/prettier/bin-prettier.js -w resources/views/",
+        "post-autoload-dump": "@prepare",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "npm run build",
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "cd workbench && npm run dev"
+        ],
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php vendor/bin/testbench serve"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VendorName\\Skeleton\\PluginServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

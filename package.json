@@ -1,0 +1,39 @@
+{
+    "name": ":vendor_slug/:package_slug",
+    "version": "1.0.0",
+    "private": false,
+    "type": "module",
+    "main": "./dist/splade-core-plugin.umd.cjs",
+    "module": "./dist/splade-core-plugin.js",
+    "files": [
+        "dist/splade-core-plugin.cjs",
+        "dist/splade-core-plugin.js"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/splade-core-plugin.js",
+            "require": "./dist/splade-core-plugin.umd.cjs"
+        }
+    },
+    "scripts": {
+        "build": "vite build"
+    },
+    "peerDependencies": {
+        "@protonemedia/laravel-splade-core": "^1.1.0",
+        "axios": "^1.1.2",
+        "vue": "^3.3.4"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@protonemedia/laravel-splade-vite": "^2.0.0",
+        "@vitejs/plugin-vue": "^4.1",
+        "eslint": "^8.51",
+        "eslint-config-prettier": "^9.0",
+        "eslint-plugin-prettier": "^4.0",
+        "eslint-plugin-prettier-vue": "^5.0",
+        "eslint-plugin-vue": "^9.17",
+        "prettier": "^2.8",
+        "prettier-plugin-blade": "^1.6.7",
+        "vite": "^4.2"
+    }
+}
