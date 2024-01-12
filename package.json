@@ -16,12 +16,14 @@
         }
     },
     "scripts": {
-        "build": "vite build"
+        "dev": "cd workbench && ln -fs ../node_modules && ./node_modules/.bin/vite",
+        "build": "vite build",
+        "build-workbench": "cd workbench && ln -fs ../node_modules && ./node_modules/.bin/vite build"
     },
     "peerDependencies": {
         "@protonemedia/laravel-splade-core": "^1.1.0",
         "axios": "^1.1.2",
-        "vue": "^3.3.4"
+        "vue": "^3.4"
     },
     "dependencies": {},
     "devDependencies": {
@@ -29,11 +31,19 @@
         "@vitejs/plugin-vue": "^4.1",
         "eslint": "^8.51",
         "eslint-config-prettier": "^9.0",
-        "eslint-plugin-prettier": "^4.0",
+        "eslint-plugin-prettier": "^5.0",
         "eslint-plugin-prettier-vue": "^5.0",
         "eslint-plugin-vue": "^9.17",
-        "prettier": "^2.8",
-        "prettier-plugin-blade": "^1.6.7",
-        "vite": "^4.2"
+        "prettier": "^3.0",
+        "prettier-plugin-blade": "^2.0",
+        "vite": "^4.5",
+        "@protonemedia/laravel-splade-core": "^1.0.0",
+        "axios": "^1.5.1",
+        "laravel-vite-plugin": "^0.8.1",
+        "vue": "^3.4",
+        "@tailwindcss/forms": "^0.5.7",
+        "autoprefixer": "^10.4.16",
+        "postcss": "^8.4.31",
+        "tailwindcss": "^3.3.5"
     }
 }

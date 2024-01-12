@@ -8,8 +8,8 @@ seeders:
   - Workbench\Database\Seeders\DatabaseSeeder
 
 workbench:
-  start: '/'
-  install: true
+  start: "/"
+  install: false
   discovers:
     web: true
     api: false
