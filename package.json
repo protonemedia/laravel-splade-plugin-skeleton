@@ -16,7 +16,7 @@
         }
     },
     "scripts": {
-        "dev": "cd workbench && ln -fs ../node_modules && ./node_modules/.bin/vite",
+        "dev": "vite build && cd workbench && ln -fs ../node_modules && ./node_modules/.bin/vite",
         "build": "vite build",
         "build-workbench": "cd workbench && ln -fs ../node_modules && ./node_modules/.bin/vite build"
     },

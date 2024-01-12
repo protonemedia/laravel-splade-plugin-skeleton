@@ -21,7 +21,6 @@ The skeleton comes with a [Workbench](https://github.com/orchestral/workbench) s
 ```bash
 composer install
 npm install
-npm run build-workbench
 ```
 
 Then, in the root of the project, run `npm run dev` to start the Vite development server. This will watch your files and automatically recompile them when you make changes. In another terminal, run `composer run serve` to start the Laravel HTTP server. This will serve the workbench application on `http://localhost:8000`.
