@@ -298,6 +298,11 @@ foreach ($files as $file) {
     };
 }
 
+file_put_contents(
+    __DIR__.'/composer.json',
+    str_replace('package:purge-' . $packageSlug, 'package:purge-skeleton', file_get_contents(__DIR__.'/composer.json'))
+);
+
 confirm('Prepare workbench environment?') && run('composer install && npm install && npm run build-workbench');
 
 confirm('Let this script delete itself?', true) && unlink(__FILE__);
