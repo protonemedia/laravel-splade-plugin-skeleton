@@ -1,6 +1,6 @@
 {
     "plugins": [
-        "./node_modules/prettier-plugin-blade/"
+        "prettier-plugin-blade"
     ],
     "semi": false,
     "singleQuote": true,

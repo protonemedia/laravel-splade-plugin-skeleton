@@ -1,0 +1,37 @@
+name: Fix Code style issues
+
+on: [push]
+
+jobs:
+  js-code-styling:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3.6.0
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.2
+          coverage: none
+
+      - name: "Install Node"
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: "Install dependencies "
+        run: |
+          composer install
+          npm install
+
+      - name: "Format code"
+        run: "composer run format"
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Fix styling

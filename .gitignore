@@ -8,5 +8,5 @@ docs
 node_modules
 package-lock.json
 phpstan.neon
-phpunit.xml
 vendor
+.phpunit.result.cache
