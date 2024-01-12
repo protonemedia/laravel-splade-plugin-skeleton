@@ -298,8 +298,8 @@ foreach ($files as $file) {
     };
 }
 
-confirm('Prepare workbench environment?') && run('composer install && npm install && cd workbench && npm install && cd .. && composer run prepare');
+confirm('Prepare workbench environment?') && run('composer install && npm install && npm run build-workbench');
 
 confirm('Let this script delete itself?', true) && unlink(__FILE__);
 
-writeln('Now run `composer serve` and `composer dev` to start developing your package!');
+writeln('Now run `composer run serve` and `npm run dev` to start developing your package!');
