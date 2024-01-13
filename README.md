@@ -35,6 +35,12 @@ You may create a new Splade component using the `make:splade-component` command:
 ./vendor/bin/testbench make:splade-component Avatar
 ```
 
+Alternatively, you may use artisan shortcut that's added to the Composer scripts:
+
+```bash
+composer artisan make:splade-component Avatar
+```
+
 Make sure to add the Component to the array in `src/PluginServiceProvider.php`:
 
 ```php
