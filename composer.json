@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^8.2|^8.3",
-        "protonemedia/laravel-splade-core": "^2.3"
+        "protonemedia/laravel-splade-core": "^4.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
