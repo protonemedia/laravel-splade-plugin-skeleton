@@ -70,7 +70,7 @@ jobs:
         run: composer run serve &
 
       - name: Execute Dusk tests
-        uses: nick-invision/retry@v2
+        uses: nick-invision/retry@v3
         with:
           timeout_minutes: 10
           max_attempts: 3
