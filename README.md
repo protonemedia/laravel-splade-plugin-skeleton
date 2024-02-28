@@ -1,5 +1,7 @@
 # Laravel Splade Core - Plugin Skeleton
 
+> :warning: This package is abandoned: [Thoughts on Splade: I took a week off to look around and reflect.](https://protone.media/en/blog/thoughts-on-splade-i-took-a-week-off-to-look-around-and-reflect)
+
 ## How to use the skeleton
 
 This skeleton is based on Spatie's [Laravel package skeleton](<https://github.com/spatie/package-skeleton-laravel>). It's a great starting point for any Laravel package, so be sure to check it out. This skeleton adds some extra features to make it easier to get started with [Splade Core](<https://github.com/protonemedia/laravel-splade-core>).
